@@ -23,7 +23,7 @@ def enterserials():
         serials_org.append(line)
 
     for serial_ in serials_org:
-        if len(serial_) > 10 and serial_ not in serials_clean:
+        if len(serial_) > 9 and serial_ not in serials_clean:
             serials_clean.append(serial_)
 
     return (serials_clean)
