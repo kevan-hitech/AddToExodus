@@ -8,22 +8,17 @@ def enterserials():
     serials_org = []
     serials_clean = []
     print("Paste serials ->:")
+
     while True:
-        try:
-            line = input()
-            
-            try:
-                if serials_org[-1] == "":
-                    break
-            except IndexError:
-                    pass
-                
-        except EOFError:
+        line = input()
+        if line:
+            serials_org.append(line)
+        else:
             break
-        serials_org.append(line)
+        
 
     for serial_ in serials_org:
-        if len(serial_) > 9 and serial_ not in serials_clean:
+        if serial_ not in serials_clean:
             serials_clean.append(serial_)
 
     return (serials_clean)
